@@ -31,6 +31,7 @@ function clearColor(item) {
   item.style.backgroundColor = "white";
 }
 
+
  //Changing the box size according to user input
  buttonSize.addEventListener("click", function changeBoxSize() {
    let userInput = window.prompt("What would you like to change the size to?");
