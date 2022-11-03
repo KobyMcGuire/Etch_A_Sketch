@@ -6,3 +6,11 @@
     box.className = "box";
  }
  
+ let boxes = document.querySelectorAll(".box");
+
+ for (const box of boxes) {
+    box.addEventListener("click", function onClick(){
+        console.log("Box clicked");
+        box.style.backgroundColor = "black";
+    })
+ }
