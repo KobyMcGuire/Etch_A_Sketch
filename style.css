@@ -7,9 +7,22 @@ html, body {
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    background-color: yellowgreen;
 }
 
+
+.buttonContainer {
+    margin-right: 100px;
+}
+
+.buttonSize {
+    margin-bottom: 50px;
+}
+
+button {
+    display: block;
+}
 
 
  .container {
@@ -18,20 +31,8 @@ body {
     grid-template-rows: repeat(6, 1fr);
     width: 500px;
     height: 500px;
+    background-color: white;
 }
-
-
-
-/* .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-}
-
-*/
 
 .box {
     border: 1px solid black;
