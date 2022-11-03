@@ -7,31 +7,52 @@ html, body {
 body {
     display: flex;
     align-items: center;
-    justify-content: start;
-    background-color: yellowgreen;
+    justify-content: flex-start;
+    background-color: yellow;
 }
 
+.header {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-size: xx-large;
+    font-family:'Courier New', Courier, monospace;
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid red;
+}
 
 .buttonContainer {
     margin-right: 100px;
 }
 
 .buttonSize {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 button {
+    width: 200px;
     display: block;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    padding: 10px;
 }
 
 
  .container {
     display: grid;
+    background-color: white;
+    border: 2px solid black;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     width: 500px;
     height: 500px;
-    background-color: white;
 }
 
 .box {
