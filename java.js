@@ -43,11 +43,11 @@ function clearColor(item) {
 
  //Changing the box size according to user input
  buttonSize.addEventListener("click", function changeBoxSize() {
-   let userInput = window.prompt("What would you like to change the size to?");
-   let area = Math.sqrt(userInput);
-   changeBoxAmount(userInput);
-   container.style.gridTemplateColumns = `repeat(${area}, 1fr)`;
-   container.style.gridTemplateRows = `repeat(${area}, 1fr)`;
+   let userInput = window.prompt("What would you like to change the size to? Ex.(\'9\' = 9x9)");
+   let area = userInput * userInput;
+   changeBoxAmount(area);
+   container.style.gridTemplateColumns = `repeat(${userInput}, 1fr)`;
+   container.style.gridTemplateRows = `repeat(${userInput}, 1fr)`;
  })
 
 
