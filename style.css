@@ -33,12 +33,10 @@ h1 {
     margin-right: 100px;
 }
 
-.buttonSize {
-    margin-bottom: 30px;
-}
 
 button {
     width: 200px;
+    margin: 10px;
     display: block;
     font-weight: bold;
     border-radius: 25px;
@@ -68,4 +66,8 @@ button:hover {
 
 .box {
     border: 1px solid black;
+}
+
+.active {
+    background-color: yellow;
 }

@@ -2,6 +2,11 @@
  let container = document.querySelector(".container");
  let buttonSize = document.querySelector(".buttonSize");
  let buttonClear = document.querySelector(".buttonClear");
+ let buttonDraw = document.querySelector(".buttonDraw");
+ let buttonErase = document.querySelector(".buttonErase");
+ let draw = false;
+ let erase = false;
+
  
  
 
@@ -20,8 +25,12 @@
  let boxes = document.querySelectorAll(".box");
  for (const box of boxes) {
     box.addEventListener("click", function onClick(){
-        console.log("Box clicked");
+      if (draw === true) {
         box.style.backgroundColor = "black";
+      }
+      if (erase === true) {
+        box.style.backgroundColor = "white";
+      }
     })
  }
 }
@@ -46,4 +55,20 @@ function clearColor(item) {
  buttonClear.addEventListener("click", function clear() {
   let boxes = document.querySelectorAll(".box");
   boxes.forEach(clearColor);
+ })
+
+
+ // Event listeners that switch Draw and Erase on / off
+ buttonDraw.addEventListener("click", function() {
+  draw = true;
+  erase = false;
+  buttonDraw.classList.add("active");
+  buttonErase.classList.remove("active");
+ })
+
+ buttonErase.addEventListener("click", function() {
+  erase = true;
+  draw = false;
+  buttonErase.classList.add("active");
+  buttonDraw.classList.remove("active");
  })
